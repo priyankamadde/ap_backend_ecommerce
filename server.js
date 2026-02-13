@@ -24,6 +24,14 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "API running successfully 🚀",
+    status: "OK"
+  });
+});
+
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
